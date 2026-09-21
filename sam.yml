@@ -1,0 +1,42 @@
+---
+- name: Deploy Static Web App Using NGINX
+  hosts: dev
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+    - name: Ensure NGINX is installed
+      apt:
+        name: nginx
+        state: present
+    - name: Remove old website content
+      file:
+        path: /var/www/html
+        state: absent
+    - name: Recreate web root directory
+      file:
+        path: /var/www/html
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: '0755'
+    - name: Copy new index.html
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+    - name: Ensure NGINX service is running
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+    - name: Restart NGINX to apply changes
+      service:
+        name: nginx
+        state: restarted
