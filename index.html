@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ansible Static Website Deployment</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fa;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:50px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#0f172a;
+    font-size:2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.workflow{
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.workflow ul{
+    padding-left:20px;
+}
+
+.workflow li{
+    margin-bottom:12px;
+}
+
+.code-block{
+    background:#0f172a;
+    color:#fff;
+    padding:20px;
+    border-radius:10px;
+    overflow:auto;
+    margin-top:20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.stat{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-radius:10px;
+}
+
+.stat h2{
+    font-size:2rem;
+}
+
+.author{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    margin-top:50px;
+}
+
+.author h2{
+    margin-bottom:15px;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2rem;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Ansible Static Website Deployment</h1>
+    <p>
+        Automated Web Application Deployment using Ansible and NGINX
+    </p>
+</header>
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>Project Overview</h2>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Infrastructure Automation</h3>
+            <p>
+                Automate server provisioning and website deployment using
+                Ansible playbooks.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>NGINX Web Server</h3>
+            <p>
+                Host static websites efficiently with NGINX.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Configuration Management</h3>
+            <p>
+                Maintain consistent server configurations across environments.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>DevOps Best Practices</h3>
+            <p>
+                Implement repeatable and scalable deployment workflows.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>Deployment Workflow</h2>
+    </div>
+
+    <div class="workflow">
+        <ul>
+            <li>Install and configure NGINX using Ansible.</li>
+            <li>Remove existing web content from the target server.</li>
+            <li>Copy the latest index.html file.</li>
+            <li>Apply permissions and ownership.</li>
+            <li>Restart NGINX service.</li>
+            <li>Validate deployment through browser access.</li>
+        </ul>
+    </div>
+
+</section>
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>Project Statistics</h2>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <h2>100%</h2>
+            <p>Automation</p>
+        </div>
+
+        <div class="stat">
+            <h2>24x7</h2>
+            <p>Availability</p>
+        </div>
+
+        <div class="stat">
+            <h2>99%</h2>
+            <p>Reliability</p>
+        </div>
+
+        <div class="stat">
+            <h2>1000+</h2>
+            <p>Deployments</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="author">
+
+    <h2>Designed & Developed by Sudeep</h2>
+
+    <p>
+        This website is created for students, beginners, and DevOps enthusiasts
+        to practice Infrastructure Automation, Configuration Management,
+        and Static Website Deployment using Ansible and NGINX.
+    </p>
+
+    <br>
+
+    <p>
+        Learning • Automation • DevOps • Cloud Infrastructure
+    </p>
+
+</section>
+
+<footer>
+    <p>
+        © 2026 DevOps Learning Project | Ansible + NGINX Deployment Demo
+    </p>
+</footer>
+
+</body>
+</html>
